@@ -16,7 +16,6 @@ function captureWebcam() {
   
         setCameraDimensions(capture);
         mediaPipe.predictWebcam(capture);
-        //mediaPipe.predictWebcam(parentDiv);
       }
     );
     capture.elt.setAttribute("playsinline", "");

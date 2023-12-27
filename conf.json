@@ -1,0 +1,5 @@
+{
+    "max-player": 2,
+    "lerpSpeed": 0.1,
+    "drawCamera": true
+}

@@ -1,3 +1,5 @@
+import conf from "../conf.json" assert { type: 'json' };;
+
 import {
   PoseLandmarker,
   FilesetResolver,
@@ -7,6 +9,7 @@ import {
 const mediaPipe = {
   landmarks: [],
   worldLandmarks: [],
+  conf: conf,
 };
 
 let poseLandmarker;
