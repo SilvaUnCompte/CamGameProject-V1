@@ -1,5 +1,5 @@
 {
-    "max-player": 2,
+    "maxBodyCount": 2,
     "lerpSpeed": 0.1,
     "drawCamera": true
 }

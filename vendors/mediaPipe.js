@@ -9,7 +9,7 @@ import {
 const mediaPipe = {
   landmarks: [],
   worldLandmarks: [],
-  conf: conf,
+  config: conf,
 };
 
 let poseLandmarker;
@@ -30,7 +30,7 @@ const createPoseLandmarker = async () => {
       delegate: "GPU",
     },
     runningMode: runningMode,
-    numPoses: 2, // change number of bodies here
+    numPoses: conf["maxBodyCount"], // change number of bodies here
   });
 };
 createPoseLandmarker();

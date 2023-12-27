@@ -5,7 +5,7 @@ let markers = [];
 let drops = []
 const armSize = 1;
 const upperArmSize = 1;
-const lerpSpeed = .1
+let lerpSpeed = .1
 
 let skeleton = [new defaultSkeleton(), new defaultSkeleton(), new defaultSkeleton(), new defaultSkeleton()];
 
@@ -76,7 +76,7 @@ function defaultSkeleton() {
 
 function setup() {
 
-  console.log(mediaPipe.conf)
+  lerpSpeed = mediaPipe.config["lerpSpeed"]
 
   createCanvas(windowWidth, windowHeight);
   captureWebcam(); // launch webcam
@@ -99,7 +99,7 @@ function draw() {
   push();
   centerOurStuff(); // center the webcam
   scale(-1, 1); // mirror webcam
-  image(capture, -capture.scaledWidth, 0, capture.scaledWidth, capture.scaledHeight); // draw webcam
+  mediaPipe.config["drawCamera"] ? image(capture, -capture.scaledWidth, 0, capture.scaledWidth, capture.scaledHeight) : null ; // draw webcam
   scale(-1, 1); // unset mirror
   pop();
 
